@@ -1,0 +1,13 @@
+.circuit-login-block{
+  /*margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;*/
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.input-auth-form{
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+}

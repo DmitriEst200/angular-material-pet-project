@@ -5,13 +5,13 @@
   <div class="container" matLine>
     <div class="row">
       <div class="col">
-        <button mat-icon-button color="accent">
+        <button mat-raised-button color="primary">
           <mat-icon svgIcon="facebook"></mat-icon>
           Läbi Facebooki
         </button>
       </div>
       <div class="col">
-        <button mat-icon-button color="red">
+        <button mat-raised-button color="primary">
           <mat-icon svgIcon="google"></mat-icon>
           Läbi Google
         </button>
@@ -22,12 +22,18 @@
   <div class="mat-app-background">
     <div class="input-auth-form">
       <mat-form-field>
-        <mat-icon>mail_outline</mat-icon>
-        <input matInput placeholder="Sisesta e-mail" value="E-mail">
+        <mat-label>E-mail</mat-label>
+        <mat-icon matPrefix>mail_outline</mat-icon>
+        <input matInput placeholder="Sisesta e-mail">
       </mat-form-field>
       <mat-form-field>
-        <mat-icon>lock</mat-icon>
-        <input matInput placeholder="Sisesta salasõna" value="Salasõna">
+        <mat-label>Salasõna</mat-label>
+        <mat-icon matPrefix>lock</mat-icon>
+        <input matInput placeholder="Sisesta salasõna" [type]="hidePass ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="switchPassVisibility()"
+                [attr.aria-label]="'Peitma salasõna'" [attr.aria-pressed]="hidePass">
+          <mat-icon matSuffix>{{ hidePass ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
       </mat-form-field>
       <div>
         <mat-checkbox>Jäta mind meelde</mat-checkbox>
@@ -35,7 +41,10 @@
       </div>
     </div>
   </div>
-  <div>
+  <div class="text-center">
     <button mat-button color="accent">Logi sisse</button>
+
+    <p>Pole veel kontot?</p><a>Loo uus konto</a>
+
   </div>
 </div>

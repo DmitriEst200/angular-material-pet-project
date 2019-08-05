@@ -1,9 +1,9 @@
 .circuit-login-block{
-  /*margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;*/
+  margin: auto;
   min-width: 300px;
   max-width: 500px;
+  min-height: 400px;
+  max-height: 600px;
 }
 
 .input-auth-form{

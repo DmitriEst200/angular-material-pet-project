@@ -1,50 +1,56 @@
 <div class="circuit-login-block">
-  <div matLine>
-    <h1>Logi sisse</h1>
-  </div>
-  <div class="container" matLine>
-    <div class="row">
-      <div class="col">
-        <button mat-raised-button color="primary">
-          <mat-icon svgIcon="facebook"></mat-icon>
-          Läbi Facebooki
-        </button>
-      </div>
-      <div class="col">
-        <button mat-raised-button color="primary">
-          <mat-icon svgIcon="google"></mat-icon>
-          Läbi Google
-        </button>
-      </div>
+  <div class="modal-wrapper">
+    <div matLine>
+      <h1>Logi sisse</h1>
     </div>
-    <p>või</p>
-  </div>
-  <div class="mat-app-background">
-    <div class="input-auth-form">
-      <mat-form-field>
-        <mat-label>E-mail</mat-label>
-        <mat-icon matPrefix>mail_outline</mat-icon>
-        <input matInput placeholder="Sisesta e-mail">
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Salasõna</mat-label>
-        <mat-icon matPrefix>lock</mat-icon>
-        <input matInput placeholder="Sisesta salasõna" [type]="hidePass ? 'password' : 'text'">
-        <button mat-icon-button matSuffix (click)="switchPassVisibility()"
-                [attr.aria-label]="'Peitma salasõna'" [attr.aria-pressed]="hidePass">
-          <mat-icon matSuffix>{{ hidePass ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </button>
-      </mat-form-field>
-      <div>
-        <mat-checkbox>Jäta mind meelde</mat-checkbox>
-        <a href="#">Unustasid salasõna?</a>
+    <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+      <div class="container" matLine>
+        <div class="row">
+          <div class="col">
+            <button mat-raised-button color="primary">
+              <mat-icon svgIcon="facebook"></mat-icon>
+              Läbi Facebooki
+            </button>
+          </div>
+          <div class="col">
+            <button mat-raised-button color="primary">
+              <mat-icon svgIcon="google"></mat-icon>
+              Läbi Google
+            </button>
+          </div>
+        </div>
+        <p>või</p>
       </div>
-    </div>
-  </div>
-  <div class="text-center">
-    <button mat-button color="accent">Logi sisse</button>
+      <div class="mat-app-background">
+        <div class="input-auth-form">
+          <mat-form-field>
+            <mat-label>E-mail</mat-label>
+            <mat-icon matPrefix>mail_outline</mat-icon>
+            <input matInput type="email" name="email" id="email" placeholder="Sisesta e-mail"
+                   [(ngModel)]="model.email" #email="ngModel" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Salasõna</mat-label>
+            <mat-icon matPrefix>lock</mat-icon>
+            <input matInput placeholder="Sisesta salasõna" [type]="hidePass ? 'password' : 'text'"
+                   name="password" id="password" [(ngModel)]="model.password" #password="ngModel" required>
+            <button mat-icon-button matSuffix (click)="switchPassVisibility()"
+                    [attr.aria-label]="'Peitma salasõna'" [attr.aria-pressed]="hidePass">
+              <mat-icon matSuffix>{{ hidePass ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+          <div>
+            <mat-checkbox>Jäta mind meelde</mat-checkbox>
+            <a href="#">Unustasid salasõna?</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button mat-button color="accent">Logi sisse</button>
 
-    <p>Pole veel kontot?</p><a>Loo uus konto</a>
+        <p>Pole veel kontot?</p><a>Loo uus konto</a>
 
+      </div>
+    </form>
   </div>
 </div>

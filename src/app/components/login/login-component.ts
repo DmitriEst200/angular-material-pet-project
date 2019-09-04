@@ -20,7 +20,7 @@ export class LoginComponent extends BaseComponent implements OnInit{
   switchPassVisibility() {
     this.hidePass = !this.hidePass;
   }
-
+  
   ngOnInit() {
     sessionStorage.setItem('token', '');
   }

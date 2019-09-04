@@ -2,25 +2,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /*margin: auto;
-  min-width: 350px;
-  min-height: 450px;
-  position: absolute;
-  top: 25%;
-  bottom: 25%;
-  left: 35%;
-  right: 35%;*/
+  height: 100%;
 }
 .modal-wrapper{
-  /*flex-grow: 1;*/
-  /*align-self: flex-start;*/
-  max-width: 39%;
-  min-width: 350px;
-  max-height: 40%;
+  min-height: 500px;
   min-width: 450px;
+  width: 80%;
+  height: 90%;
 }
 .input-auth-form{
   display: flex;
   flex-direction: column;
   padding: 6px;
+}
+.background-tips{
+  background-image: url("../../../assets/images/sign-up/building-img1.jpg");
+  background-size: cover;
+}
+
+.background-tips-overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

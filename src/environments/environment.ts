@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   baseHref: "http://localhost:8080",
-  apiContext: "http://localhost:8085/api"
+  apiContext: "http://localhost:8083/api"
 };
 
 /*

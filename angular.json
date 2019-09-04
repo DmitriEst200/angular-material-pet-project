@@ -22,8 +22,14 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/styles/scss"
+              ]
+            },
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/styles.scss"
             ],
             "scripts": [],
             "es5BrowserSupport": true
@@ -52,6 +58,14 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "local-serve": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local-serve.ts"
+                }
+              ]
             }
           }
         },
@@ -63,6 +77,9 @@
           "configurations": {
             "production": {
               "browserTarget": "angular-material-pet-project:build:production"
+            },
+            "local-serve": {
+              "browserTarget": "angular-material-pet-project:build:local-serve"
             }
           }
         },

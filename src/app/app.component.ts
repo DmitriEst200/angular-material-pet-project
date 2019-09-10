@@ -16,7 +16,7 @@ export class AppComponent {
   ){
     this.matIconRegistry.addSvgIcon(
       "facebook",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/images/facebook(1).svg")
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/images/facebook.svg")
     );
     this.matIconRegistry.addSvgIcon(
       "google",

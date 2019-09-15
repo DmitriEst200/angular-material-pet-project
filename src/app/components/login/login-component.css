@@ -28,7 +28,6 @@
   right: 0;
 }
 
-.mat-icon {
-  width: 24px;
-  height: 24px;
+:host .mat-icon{
+  vertical-align: middle;
 }

@@ -27,7 +27,3 @@
   left: 0;
   right: 0;
 }
-
-:host .mat-icon{
-  vertical-align: middle;
-}

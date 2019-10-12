@@ -6,3 +6,7 @@
 html, body{
   height: 100%;
 }
+
+.mat-icon svg {
+  vertical-align: top;
+}

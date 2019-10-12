@@ -35,13 +35,13 @@
               <div class="input-auth-form">
                 <mat-form-field>
                   <mat-label>E-mail</mat-label>
-                  <mat-icon matPrefix>mail_outline</mat-icon>
+                  <mat-icon [inline]="true" matPrefix>mail_outline</mat-icon>
                   <input matInput type="email" name="email" id="email" placeholder="Sisesta e-mail"
                        [(ngModel)]="model.email" #email="ngModel" required>
                 </mat-form-field>
                 <mat-form-field>
                   <mat-label>Salasõna</mat-label>
-                  <mat-icon matPrefix>lock</mat-icon>
+                  <mat-icon [inline]="true" matPrefix>lock</mat-icon>
                   <input matInput placeholder="Sisesta salasõna" [type]="hidePass ? 'password' : 'text'"
                        name="password" id="password" [(ngModel)]="model.password" #password="ngModel" required>
                   <button mat-icon-button matSuffix (click)="switchPassVisibility()"
